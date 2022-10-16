@@ -84,10 +84,14 @@ const resolvers = {
         heading({ text: "Reviews" }),
         ..._book.reviews.map(({ author, text }) => review({ author, text }))
       ];
+      const card = {
+        name: "Card",
+        props: [ ]
+      };
 
       // Invert order to change the UI and refresh the client
       // return [Author, Book];
-      return [Book, Author, ...Reviews];
+      return [Book, Author, ...Reviews, card];
     }
   }
 };

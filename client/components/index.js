@@ -8,7 +8,7 @@ export const renderComponent = ({ name, props }) => {
     componentProps[name] = value;
   });
 
-  return <Component>{componentProps}</Component>;
+  return <Component {...componentProps} />;
 };
 
 export const renderUI = components => {
