@@ -11,8 +11,16 @@ export const renderComponent = ({ name, props }) => {
   return <Component {...componentProps} />;
 };
 
+const pageStyle = {
+  marginTop: 100,
+  marginLeft: "auto",
+  marginRight: "auto",
+  maxWidth: 1200,
+}
+
 export const renderUI = components => {
   return (
+    <div style={pageStyle}>
     <React.Fragment>
       {components.map(({ name, props }, key) => (
         <React.Fragment key={key}>
@@ -20,5 +28,6 @@ export const renderUI = components => {
         </React.Fragment>
       ))}
     </React.Fragment>
+    </div>
   );
 };

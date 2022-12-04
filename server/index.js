@@ -91,7 +91,12 @@ const resolvers = {
 
       // Invert order to change the UI and refresh the client
       // return [Author, Book];
-      return [Book, Author, ...Reviews, card];
+      return [
+        Book,
+        Author,
+        // ...Reviews,
+        card,
+      ];
     }
   }
 };

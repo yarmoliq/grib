@@ -15,7 +15,7 @@ const GET_BOOK = gql`
 `;
 
 export default () => (
-  <Query query={GET_BOOK} variables={{ id: "1" }}>
+  <Query  query={GET_BOOK} variables={{ id: "1" }}>
     {({ loading, error, data }) => {
       if (loading) return <p>Loading...</p>;
       if (error) return <p>Error :(</p>;

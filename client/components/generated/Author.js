@@ -4,17 +4,9 @@ const cardStyle = {
   margin: 10
 }
 
-const containerStyle = {
-  display: "flex",
-  flexShrink: 0,
-  flexDirection: "row",
-  flexWrap: "wrap",
-}
-
-export default ({ name, age }) => (
+export default ({ name }) => (
   <div>
     <h3>Author</h3>
     <p>Author: {name}</p>
-    <p>Age: {age}</p>
   </div>
 );
