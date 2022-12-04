@@ -1,0 +1,24 @@
+name: DockerCompose
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  docker:
+    runs-on: ubuntu-latest
+
+    steps:
+    #- name: Checkout
+    #  uses: actions/checkout@v1
+
+    - name: Start containers
+      run: docker-compose up --build
+
+    - name: Stop containers
+      if: always()
+      run: docker-compose down
